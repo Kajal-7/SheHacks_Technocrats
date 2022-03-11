@@ -1,4 +1,12 @@
 import React from "react";
-function BuyProduct();
 
+const BuyProduct = () => {
+    return ( 
+        <div className="buy">
+            BuyProduct
+        </div>
+     );
+}
+ 
 export default BuyProduct;
+ 

@@ -1,4 +1,12 @@
 import React from "react";
-function FindJob();
 
+
+const FindJob = () => {
+    return ( 
+        <div className="FindJob">
+            FindJob page
+        </div>
+     );
+}
+ 
 export default FindJob;

@@ -1,4 +1,11 @@
 import React from "react";
-function Empower();
 
+const Empower = () => {
+    return ( 
+        <div className="empower">
+            Empower Page
+        </div>
+     );
+}
+ 
 export default Empower;

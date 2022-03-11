@@ -1,4 +1,12 @@
 import React from "react";
-function GetStarted();
 
+
+const GetStarted = () => {
+    return ( 
+        <div className="getStarted">
+            GetStarted
+        </div>
+     );
+}
+ 
 export default GetStarted;

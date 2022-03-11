@@ -1,4 +1,11 @@
 import React from "react";
-function PostJob();
 
+const PostJob = () => {
+    return ( 
+        <div className="postjob">
+            Post Job page
+        </div>
+     );
+}
+ 
 export default PostJob;
