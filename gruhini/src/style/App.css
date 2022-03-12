@@ -42,7 +42,9 @@ form{
 }
 
 .profile {
+  color:white;
   position: absolute;
+  float: left !important;
   background-color: white;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
