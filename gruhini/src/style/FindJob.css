@@ -103,3 +103,7 @@
 .jobtype {
   color: var(--pri-color);
 }
+
+h2 {
+  font-size: 25px;
+}

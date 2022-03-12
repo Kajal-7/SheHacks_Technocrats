@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import "./style/Filter.css";
 
 const drawerWidth = 240;
-  
+
 function FindJob() {
   return (
     <div className="ms-4 me-5">
@@ -20,6 +20,12 @@ function FindJob() {
               width: { sm: `calc(100% - ${drawerWidth}px)` },
             }}
           >
+            <h2 className="mt-3 mb-0 tri-color">
+              <em>
+                There is the chance, just grab it and find the job that suits
+                you the best!
+              </em>
+            </h2>
             <Cards />
           </Box>
         </Box>

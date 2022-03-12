@@ -29,11 +29,21 @@ export default function TemporaryDrawer(props) {
         <br />
         <div className="mb-3">
           Location
-          <input className="mb-3 rounded border-1" type="text" value={props.locFilter} onChange={(e) => props.onLocSet(e.target.value)}></input>
+          <input
+            className="mb-3 rounded border-1"
+            type="text"
+            value={props.locFilter}
+            onChange={(e) => props.onLocSet(e.target.value)}
+          ></input>
         </div>
         <div className="mb-3">
           Categories
-          <input className="mb-3 rounded border-1" type="text" value={props.catgfilter} onChange={(e) => props.onCatgSet(e.target.value)}></input>
+          <input
+            className="mb-3 rounded border-1"
+            type="text"
+            value={props.catgfilter}
+            onChange={(e) => props.onCatgSet(e.target.value)}
+          ></input>
         </div>
         <div className="mb-3">
           Desired Salary
@@ -42,9 +52,19 @@ export default function TemporaryDrawer(props) {
         <div className="mb-3">
           Job Type
           <div className="border rounded p-2 mt-3 m-3 checkbox">
-            <input className="ms-2 me-2 rounded" type="checkbox" checked={props.partTime}  onChange={()=>props.onPartTimeCheck(!props.partTime)}></input>
+            <input
+              className="ms-2 me-2 rounded"
+              type="checkbox"
+              checked={props.partTime}
+              onChange={() => props.onPartTimeCheck(!props.partTime)}
+            ></input>
             Part-Time &nbsp;
-            <input className="ms-2 me-2 rounded" type="checkbox" checked={props.fullTime} onChange={()=>props.onFullTimeCheck(!props.fullTime)}></input>
+            <input
+              className="ms-2 me-2 rounded"
+              type="checkbox"
+              checked={props.fullTime}
+              onChange={() => props.onFullTimeCheck(!props.fullTime)}
+            ></input>
             Full-Time
           </div>
         </div>
@@ -62,7 +82,6 @@ export default function TemporaryDrawer(props) {
             variant="contained"
             sx={{ boxShadow: 0, bgcolor: "#97c1c8" }}
             onClick={toggleDrawer(anchor, false)}
-            
           >
             Close
           </Button>
