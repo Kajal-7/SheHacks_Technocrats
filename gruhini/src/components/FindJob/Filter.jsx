@@ -113,7 +113,7 @@ export default function TemporaryDrawer(props) {
               aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default"
               placeholder="Search "
-              autocomplete="off"
+              autoComplete="off"
               value={props.searchText}
               onChange={props.onSearch}
             />
