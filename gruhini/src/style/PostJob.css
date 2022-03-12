@@ -16,6 +16,18 @@ form {
 .jobForm {
   color: var(--txt-color) !important;
   background-color: var(--for-color) !important;
+  display: block;
+  margin: 0 auto;
+}
+
+.postjobtext {
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+.show {
+  display: block !important;
+  margin: 0 auto !important;
 }
 
 .jobForm input,
@@ -80,4 +92,8 @@ textarea {
   background-color: var(--pri-color) !important;
   color: #ffffff !important;
   border-color: var(--pri-color) !important;
+}
+
+.text-justify {
+  text-align: justify;
 }

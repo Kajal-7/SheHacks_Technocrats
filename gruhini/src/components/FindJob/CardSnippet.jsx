@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import EventAvailableOutlinedIcon from "@mui/icons-material/EventAvailableOutlined";
@@ -13,7 +11,6 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Star from "./Star";
 import "../../style/FindJob.css";
-import WorkIcon from "@mui/icons-material/Work";
 import data from "./data";
 import Filter from "./Filter";
 import Popup from "./Popup";

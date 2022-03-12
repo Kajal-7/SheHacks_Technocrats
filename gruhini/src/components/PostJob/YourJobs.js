@@ -10,66 +10,70 @@ import PaidOutlinedIcon from "@mui/icons-material/PaidOutlined";
 import AccessTimeFilledOutlinedIcon from "@mui/icons-material/AccessTimeFilledOutlined";
 import { Button } from "@mui/material";
 
-const YourJobs = ({arr}) => {
-  
-  const [show, setShow] = useState(false)
+const YourJobs = ({ arr }) => {
+  const [show, setShow] = useState(false);
   return (
     <div className="yourJob">
-      <Button onClick={ () => setShow(!show) }>Show</Button>
-      {
-        show && <Grid container spacing={5}>
-        {arr.map((item) => {
-          return (
-            <Grid item xs={12} sm={12} md={6} lg={8}>
-              <Card className="card">
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {item.jobName}
-                  </Typography>
-                  <Typography variant="h6" color="text.secondary">
-                    {item.title}
-                  </Typography>
+      <Button
+        className="show mt-5 ms-5 ctc1-small"
+        onClick={() => setShow(!show)}
+      >
+        Show Jobs Posted by you
+      </Button>
+      {show && (
+        <div className="row p-3 show">
+          {arr.map((item) => {
+            return (
+              <div className="col mt-5 mb-5">
+                <Card className="card">
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      {item.jobName}
+                    </Typography>
+                    <Typography variant="h6" color="text.secondary">
+                      {item.title}
+                    </Typography>
 
-                  <div>
-                    <div className="info" style={{ display: "inline-block" }}>
-                      <div className="tag" style={{ display: "inline-flex" }}>
-                        <LocationOnOutlinedIcon /> {item.location}
+                    <div>
+                      <div className="info" style={{ display: "inline-block" }}>
+                        <div className="tag" style={{ display: "inline-flex" }}>
+                          <LocationOnOutlinedIcon /> {item.location}
+                        </div>
+                      </div>
+                      <div className="info" style={{ display: "inline-block" }}>
+                        <div className="tag" style={{ display: "inline-flex" }}>
+                          <PhoneInTalkOutlinedIcon />
+                          {item.PhoneNo}
+                        </div>
                       </div>
                     </div>
                     <div className="info" style={{ display: "inline-block" }}>
                       <div className="tag" style={{ display: "inline-flex" }}>
-                        <PhoneInTalkOutlinedIcon />
-                        {item.PhoneNo}
+                        <EventAvailableOutlinedIcon /> Duration
                       </div>
+                      <div className="value">{item.Duration}</div>
                     </div>
-                  </div>
-                  <div className="info" style={{ display: "inline-block" }}>
-                    <div className="tag" style={{ display: "inline-flex" }}>
-                      <EventAvailableOutlinedIcon /> Duration
+                    <div className="info" style={{ display: "inline-block" }}>
+                      <div className="tag" style={{ display: "inline-flex" }}>
+                        <PaidOutlinedIcon />
+                        Stipend
+                      </div>
+                      <div className="value">{item.Salary}</div>
                     </div>
-                    <div className="value">{item.Duration}</div>
-                  </div>
-                  <div className="info" style={{ display: "inline-block" }}>
-                    <div className="tag" style={{ display: "inline-flex" }}>
-                      <PaidOutlinedIcon />
-                      Stipend   
+                    <div className="info" style={{ display: "inline-block" }}>
+                      <div className="tag" style={{ display: "inline-flex" }}>
+                        <AccessTimeFilledOutlinedIcon />
+                        Apply by
+                      </div>
+                      <div className="value">{item.Deadline}</div>
                     </div>
-                    <div className="value">{item.Salary}</div>
-                  </div>
-                  <div className="info" style={{ display: "inline-block" }}>
-                    <div className="tag" style={{ display: "inline-flex" }}>
-                      <AccessTimeFilledOutlinedIcon />
-                      Apply by
-                    </div>
-                    <div className="value">{item.Deadline}</div>
-                  </div>
-                </CardContent>
-              </Card>
-            </Grid>
-          );
-        })}
-    </Grid>
-      }
+                  </CardContent>
+                </Card>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 };
