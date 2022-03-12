@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import "./style/Filter.css";
 
 const drawerWidth = 240;
-
+  
 function FindJob() {
   return (
     <div className="ms-4 me-5">
