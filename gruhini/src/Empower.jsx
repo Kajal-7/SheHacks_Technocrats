@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar.jsx";
 import QuoteImg from "./components/Empower/QuoteImg";
 import Cardsnippet from "./components/Empower/Cardsnippet_Empower";
 import Grid from "@mui/material/Grid";
