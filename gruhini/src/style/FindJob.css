@@ -1,0 +1,54 @@
+@import "./App.css";
+
+.card {
+  border-style: solid;
+  border-color: #797979;
+  border-width: 1px;
+  box-shadow: 0px 0px 0px 0px !important;
+  /* z-index: -1; */
+  background-color: var(--for-color) !important;
+  color: var(--txt-color) !important;
+}
+
+.info {
+  padding-right: 28px;
+  padding-top: 10px;
+}
+
+@import "./App.css";
+
+.ctc1-small,
+.ctc2-small {
+  font-size: 13px !important;
+  border: 1px solid var(--sec-color);
+  padding: 8px 16px;
+}
+
+.ctc1-small {
+  color: #ffffff;
+}
+
+.service-card {
+  background-color: var(--for-color);
+  color: var(--txt-color);
+  box-shadow: none;
+  border: 0.5px solid var(--sec-color);
+}
+
+@media (max-width: 700px) {
+  .small-display-none {
+    display: none;
+  }
+  .col-9 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+.popup {
+  background-color: var(--for-color);
+}
+
+.contact-info {
+  color: var(--txt-color) !important;
+}
