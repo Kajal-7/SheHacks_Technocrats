@@ -23,8 +23,8 @@ function QuoteImg() {
         <p style={{fontSize: "20px"}}>
           We at Gruhini, believe that empowerment begins with independence and
           every woman should be self-dependent in any and every aspect of life.
-            <p className="mt-2" style={{fontSize: "25px"}}>Learn how to :</p>
         </p>
+        <p className="mt-2" style={{fontSize: "25px"}}>Learn how to :</p>
       </Grid>
     </div>
   );

@@ -27,7 +27,7 @@ const PostJob = () => {
         return doc.data().product;
       })
       .then((myPros) => {
-        myPros.forEach((pid) => {
+        myPros.length && myPros.forEach((pid) => {
           getDoc(doc(colRef, pid)).then((snap) => {
             temp.push(snap.data());
           });
