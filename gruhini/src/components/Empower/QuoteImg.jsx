@@ -5,7 +5,7 @@ import "../../style/Empower.css";
 
 function QuoteImg() {
   return (
-    <div>
+    <div className="quote-img">
       <Grid item md={4} lg={4}>
         <img
           src={require("../../assets/woman.png")}
@@ -26,8 +26,11 @@ function QuoteImg() {
           <br />
           We at Gruhini, believe that empowerment begins with independence and
           every woman should be self-dependent in any and every aspect of life.
-          <br/><br/>
-          <b><i>Learn how to:</i></b>
+          <br />
+          <br />
+          <b>
+            <i>Learn how to:</i>
+          </b>
         </h3>
       </Grid>
     </div>

@@ -68,7 +68,7 @@ h3 {
 
 @media (max-width: 700px) {
   .quote-img {
-    display: none;
+    display: none !important;
   }
   .col-9 {
     flex: 0 0 auto;
