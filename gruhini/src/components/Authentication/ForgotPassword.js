@@ -10,6 +10,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { useState } from 'react';
 import Alert from '@mui/material/Alert';
+import { useAuthContext } from '../../data/auth';
 
 const ForgotPass = () => {
 
@@ -17,20 +18,20 @@ const ForgotPass = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
-//   const { forgetPassword } = useAuthContext();
+  const { forgetPassword } = useAuthContext();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // try{
-    //     setError(null);
-    //     setMessage(null);
-    //     await forgetPassword(email);
-    //     setMessage("Check your inbox to find the reset link.")
-    // }
-    // catch(error){
-    //   setError("Failed to send. Please check the entered email.");
-    // }
+    try{
+        setError(null);
+        setMessage(null);
+        await forgetPassword(email);
+        setMessage("Check your inbox to find the reset link.")
+    }
+    catch(error){
+      setError("Failed to send. Please check the entered email.");
+    }
   }
   //firebase end
 
