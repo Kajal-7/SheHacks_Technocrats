@@ -45,9 +45,6 @@
 
 @import "./App.css";
 
-.job-card {
-  min-width: 431px !important;
-}
 
 .service-card,
 .job-card {
