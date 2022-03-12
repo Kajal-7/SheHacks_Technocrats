@@ -41,17 +41,12 @@ form {
 }
 
 .profile {
-  color:white;
-  position: absolute;
-  float: left !important;
-  background-color: white;
+  position: fixed !important;
+  right: 10px !important;
+  background-color: var(--for-color);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
   padding: 10px;
-  border-radius: 5px;
-  border: 0.5px solid black;
-  align-items: center;
-  text-align: center;
 }
 
 /* width */
@@ -82,4 +77,26 @@ form {
 
 .custom-file-input {
   opacity: 1 !important;
+}
+
+.ctc1-small,
+.ctc2-small {
+  font-size: 13px !important;
+  border: 1px solid var(--sec-color);
+  padding: 8px 16px;
+}
+
+.ctc1-small {
+  color: #ffffff;
+}
+
+.ctc2-small {
+  color: var(--sec-color) !important;
+}
+
+.ctc1-small:hover,
+.ctc2-small:hover {
+  background-color: var(--pri-color) !important;
+  border: 1px solid var(--pri-color) !important;
+  color: #ffffff !important;
 }

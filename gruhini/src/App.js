@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style/App.css";
 import Empower from "./Empower";
 import FindJob from "./FindJob";
@@ -13,10 +13,21 @@ import ForgotPass from "./components/Authentication/ForgotPassword";
 import { Authentication } from "./data/auth";
 import PrivateRoute from "./components/PrivateRoute";
 import Queries from "./Queries";
+import Loading from './components/Loading';
 
 function App() {
-  return (
-    <div className="App">
+
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
+  return (      
+    loading ? <Loading/> : <div className="App">
       <Authentication child={
         <Router>
         <Routes>
