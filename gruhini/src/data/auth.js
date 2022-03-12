@@ -51,6 +51,7 @@ export function Authentication ({child}) {
                 name : name,
                 avatar : colors[Math.floor(Math.random() * 10)],
                 array : [],
+                products : [],
                 location: location
                 }; 
             //adding a document with doc id as uid
