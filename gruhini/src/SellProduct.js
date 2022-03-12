@@ -53,10 +53,7 @@ const PostJob = () => {
                 Post your Products here!
               </p>
               <p style={{ fontSize: "18px" }}>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
-                aut vero architecto sit nobis quos error consectetur, enim
-                aliquid accusamus laboriosam magni libero modi at minima fuga
-                ea. Quisquam, quasi!
+                Stand out and show case your product. Let the world know your potential.
               </p>
             </div>
             {/* <p className='textField' style={{ fontSize: "21px"}}>Jobs posted by you</p> */}

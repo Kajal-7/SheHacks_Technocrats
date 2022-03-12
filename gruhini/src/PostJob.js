@@ -53,10 +53,7 @@ const PostJob = () => {
                 Post a Job and recruit easily!
               </p>
               <p style={{ fontSize: "18px" }}>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
-                aut vero architecto sit nobis quos error consectetur, enim
-                aliquid accusamus laboriosam magni libero modi at minima fuga
-                ea. Quisquam, quasi!
+                Need staff? Spread the word amoung aspiring women employees and artisans via Gruhini. 
               </p>
             </div>
             {/* <p className='textField' style={{ fontSize: "21px"}}>Jobs posted by you</p> */}

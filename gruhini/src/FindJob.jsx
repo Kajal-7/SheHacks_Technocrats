@@ -22,7 +22,7 @@ function FindJob() {
           >
             <h2 className="mt-3 mb-0 tri-color">
               <em>
-                There is the chance, just grab it and find the job that suits
+                Opportunities are waiting! Just grab them, find the job that suits
                 you the best!
               </em>
             </h2>
