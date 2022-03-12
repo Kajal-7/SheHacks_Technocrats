@@ -45,17 +45,6 @@
 
 @import "./App.css";
 
-.ctc1-small,
-.ctc2-small {
-  font-size: 13px !important;
-  border: 1px solid var(--sec-color);
-  padding: 8px 16px;
-}
-
-.ctc1-small {
-  color: #ffffff;
-}
-
 .service-card {
   background-color: var(--for-color);
   color: var(--txt-color);
