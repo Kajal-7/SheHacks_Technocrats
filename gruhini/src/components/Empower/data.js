@@ -11,7 +11,7 @@ const data = {
       colorName: "#FFCECA",
       imageUrl: img1,
       question: "Open a Bank Account",
-      note: "Start managing your money!",
+      note: "Manage your money easily and keep it safe!",
       buttonColor: "#FA9490",
       instructions: [
         {
@@ -53,8 +53,8 @@ const data = {
       id: 2,
       colorName: "#BCE6ED",
       imageUrl: img2,
-      question: "Book a Cab",
-      note: "Blah blah blah",
+      question: "Use Uber/OLA",
+      note: "Hire a driver for self! An easy way to drive to work!",
       buttonColor: "#97C1C8",
       instructions: [
         {
@@ -105,7 +105,7 @@ const data = {
       colorName: "#B3C1F0",
       imageUrl: img3,
       question: "The Importance of Sanitation",
-      note: "Blah blah blah",
+      note: "essential to survival and development.",
       buttonColor: "#56669D",
       instructions: [
         {
@@ -155,8 +155,8 @@ const data = {
       id: 4,
       colorName: "#BCE6ED",
       imageUrl: img4,
-      question: "Know Your Rights",
-      note: "Blah blah blah",
+      question: "Know Your Rights and stand for them",
+      note: "Stand for what's your's. Learn to claim your rights",
       buttonColor: "#97C1C8",
       instructions: [
         {
@@ -207,7 +207,7 @@ const data = {
       colorName: "#B3C1F0",
       imageUrl: img1,
       question: "Laws Against Sexual Harassment",
-      note: "Blah blah blah",
+      note: "Know that the world is against the wrong.",
       buttonColor: "#56669D",
       instructions: [
         {
@@ -258,7 +258,7 @@ const data = {
       colorName: "#FFCECA",
       imageUrl: img6,
       question: "Government Schemes for Rural Women in India",
-      note: "Blah blah blah",
+      note: "Retrieve what's out there, waiting for you!",
       buttonColor: "#FA9490",
       instructions: [
         {

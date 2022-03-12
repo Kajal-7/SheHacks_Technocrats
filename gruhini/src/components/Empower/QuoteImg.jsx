@@ -19,19 +19,12 @@ function QuoteImg() {
           }}
         />
       </Grid>
-      <Grid className="mt-5" item xs={12} sm={12} md={12} lg={12}>
-        <h3>
-          <br />
-          <br />
-          <br />
+      <Grid sx={{mt:11}} item xs={12} sm={12} md={12} lg={12}>
+        <p style={{fontSize: "20px"}}>
           We at Gruhini, believe that empowerment begins with independence and
           every woman should be self-dependent in any and every aspect of life.
-          <br />
-          <br />
-          <b>
-            <i>Learn how to:</i>
-          </b>
-        </h3>
+            <p className="mt-2" style={{fontSize: "25px"}}>Learn how to :</p>
+        </p>
       </Grid>
     </div>
   );
