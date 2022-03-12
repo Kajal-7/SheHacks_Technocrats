@@ -60,7 +60,23 @@ export default function ResponsiveDialog({ ques, video, instructions, color }) {
           <DialogContentText
             className="txt display-linebreak"
             id="Inst"
-          ></DialogContentText>
+          >
+            <ol className="instructions-list">
+              {instructions.map((item) => {
+                return (
+                  <li className="m-2">
+                    <em className="tri-color">{item.subheading}</em>
+                    &nbsp; {item.text}
+                    <ol>
+                      {item.listitems.map((items) => {
+                        return <li>{items.li}</li>;
+                      })}
+                    </ol>
+                  </li>
+                );
+              })}
+            </ol>
+          </DialogContentText>
         </DialogContent>
         <DialogActions className="popup">
           <Button
