@@ -6,11 +6,13 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Register from "./components/Authentication/Register";
 import Login from "./components/Authentication/Login";
 import ForgotPass from "./components/Authentication/ForgotPassword";
+import { Authentication } from "./data/auth";
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Authentication child={
+        <Router>
         <Routes>
           <Route exact path="/" element={<GetStarted />} />
           <Route path="/login" element={<Login />} /> 
@@ -19,6 +21,8 @@ function App() {
           <Route path={"/forgotpassword"} element={<ForgotPass/>} />
         </Routes>
       </Router>
+      } />
+      
     </div>
   );
 }

@@ -12,6 +12,8 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Alert from '@mui/material/Alert';
 import { useState } from 'react';
+import { useAuthContext } from '../../data/auth';
+import { useNavigate } from 'react-router-dom';
 import '../../style/GetStarted.css';
 
 const Login = () => {
@@ -20,17 +22,19 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
+    const { logIn } = useAuthContext();
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError("");
-        // try{
-        //   await logIn(email, password);
-        //   navigate("/empower");
-        // }
-        // catch(error){
-        //   setError(error.message);
-        // }
+        try{
+          await logIn(email, password);
+          navigate("/empower");
+        }
+        catch(error){
+          setError(error.message);
+        }
       }
       
     //mui start

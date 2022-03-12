@@ -12,6 +12,8 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Alert from '@mui/material/Alert';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuthContext } from '../../data/auth';
 import '../../style/GetStarted.css';
 
 const Register = () => {
@@ -22,6 +24,9 @@ const Register = () => {
   const [confpassword, setconfPassword] = useState("");
   const [error, setError] = useState("");
   const [name, setName] = useState("");
+  const [loc, setLoc] = useState("");
+  const { signUp, userDoc } = useAuthContext();
+  const navigate = useNavigate();
 //   const { signUp, userDoc } = useAuthContext();
    
   const handleSubmit = async (e) => {
@@ -31,17 +36,17 @@ const Register = () => {
     if(password!==confpassword){
       return setError("Passwords do not match");
     }
-    // try{
-    //   await signUp(email, password).then(
-    //     (value)=>{
-    //       userDoc(email,name,value);
-    //     }
-    //   )
-    //   navigate("/empower");
-    // }
-    // catch(error){
-    //   setError(error.message);
-    // }
+    try{
+      await signUp(email, password).then(
+        (value)=>{
+          userDoc(email,name,loc, value);
+        }
+      )
+      navigate("/empower");
+    }
+    catch(error){
+      setError(error.message);
+    }
   }
   //firebase end
 
@@ -99,6 +104,8 @@ const Register = () => {
           {error && <Alert sx={{m:1}} severity="error">{error}</Alert>}
           <TextField fullWidth  id="standard-basic" label="Full Name" variant="standard"
           onChange={(e)=> setName(e.target.value) } />
+          <TextField fullWidth sx={{ mt: 2 }} id="standard-basic" label="Location" variant="standard"
+          onChange={(e)=> setLoc(e.target.value) } />
           <TextField fullWidth sx={{ mt: 2 }} id="standard-basic" label="E-mail" variant="standard" 
           onChange={(e)=> setEmail(e.target.value)}/>
           <FormControl sx={{ mt: 2 }} fullWidth variant="standard"
