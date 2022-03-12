@@ -7,22 +7,24 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import CardActions from "@mui/material/CardActions";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import ShareIcon from "@mui/icons-material/Share";
 import data from "./data";
 import { useState } from "react";
 import search from "../../assets/search.png";
+import Popup from "./Popup";
 
 export default function CardSnippet(props) {
-
   const [filter, setFilter] = useState("");
-  const searchText=(event)=>{
-        setFilter(event.target.value);
-  }
-  let dataSearch= data.cardData.filter(item=>{
-        return Object.keys(item).some(key=>
-          item[key].toString().toLowerCase().includes(filter.toString().toLowerCase())
-          )
+  const searchText = (event) => {
+    setFilter(event.target.value);
+  };
+  let dataSearch = data.cardData.filter((item) => {
+    return Object.keys(item).some((key) =>
+      item[key]
+        .toString()
+        .toLowerCase()
+        .includes(filter.toString().toLowerCase())
+    );
   });
   return (
     <div>
@@ -38,8 +40,13 @@ export default function CardSnippet(props) {
           value={filter}
           onChange={searchText.bind(this)}
         />
-        <button class="button" onClick={ (e) => {e.preventDefault()} }>
-          <img src={search} width="30px" />
+        <button
+          class="button"
+          onClick={(e) => {
+            e.preventDefault();
+          }}
+        >
+          <img src={search} alt="search button" width="30px" />
         </button>
       </form>
       <Grid container spacing={10}>
@@ -47,11 +54,13 @@ export default function CardSnippet(props) {
           return (
             <Grid item xs={12} sm={12} md={6} lg={4}>
               <Card
+                className="empower-card"
                 style={{ backgroundColor: item.colorName }}
                 sx={{ pt: 3, px: 1 }}
               >
                 <div style={{ display: "flex", justifyContent: "center" }}>
                   <CardMedia
+                    className="empower-card-img"
                     component="img"
                     sx={{ width: 100 }}
                     image={item.imageUrl}
@@ -59,7 +68,12 @@ export default function CardSnippet(props) {
                   />
                 </div>
                 <CardContent align="center">
-                  <Typography gutterBottom variant="h6" component="div">
+                  <Typography
+                    className="empower-que"
+                    gutterBottom
+                    variant="h6"
+                    component="div"
+                  >
                     {item.question}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
@@ -74,17 +88,12 @@ export default function CardSnippet(props) {
                     <ShareIcon />
                   </IconButton>
 
-                  <Button
-                    style={{
-                      borderRadius: 0,
-                      backgroundColor: item.buttonColor,
-                      padding: "5px 15px",
-                      marginLeft: "auto",
-                    }}
-                    variant="contained"
-                  >
-                    Learn
-                  </Button>
+                  <Popup
+                    ques={item.question}
+                    video={item.video}
+                    instructions={item.instructions}
+                    color={item.buttonColor}
+                  />
                 </CardActions>
               </Card>
             </Grid>
