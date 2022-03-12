@@ -43,7 +43,7 @@ function ResponsiveDrawer() {
                       e.preventDefault();
                     }}
                   >
-                    <img src={search} width="30px" />
+                    <img src={search} alt="search" width="30px" />
                   </button>
                 </form>
                 <Cards />
@@ -60,7 +60,7 @@ function ResponsiveDrawer() {
                   <h3 className="text-decoration-underline">
                     Gruhini of the Month
                   </h3>
-                  <img className="rounded mt-3 border" src={gruhini} />
+                  <img className="rounded mt-3 border" src={gruhini} alt={"Gruhini"} />
                   <h3 className="mt-3">Roshni Upadhyay</h3>
                 </div>
               </div>

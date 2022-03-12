@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import Typography from "@mui/material/Typography";
@@ -9,18 +8,16 @@ import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import EventAvailableOutlinedIcon from "@mui/icons-material/EventAvailableOutlined";
 import PaidOutlinedIcon from "@mui/icons-material/PaidOutlined";
 import AccessTimeFilledOutlinedIcon from "@mui/icons-material/AccessTimeFilledOutlined";
-import Button from "@mui/material/Button";
-import { collection, doc, getDoc } from "firebase/firestore";
-import { db } from "../../data/firebase";
-import { useAuthContext } from "../../data/auth.js";
-import { useEffect, useState } from "react";
-// import MyCard from './CardSnippet';
+import { Button } from "@mui/material";
 
 const YourJobs = ({arr}) => {
-    
+  
+  const [show, setShow] = useState(false)
   return (
-    <Grid container spacing={5}>
-                
+    <div className="yourJob">
+      <Button onClick={ () => setShow(!show) }>Show</Button>
+      {
+        show && <Grid container spacing={5}>
         {arr.map((item) => {
           return (
             <Grid item xs={12} sm={12} md={6} lg={8}>
@@ -72,6 +69,8 @@ const YourJobs = ({arr}) => {
           );
         })}
     </Grid>
+      }
+    </div>
   );
 };
 

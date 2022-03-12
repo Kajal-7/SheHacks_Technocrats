@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Alert, Button, imageListClasses } from "@mui/material";
+import { Alert, Button } from "@mui/material";
 import FirstStep from "./FirstStep";
 import SecondStep from "./SecondStep";
 import { ArrowBack } from "@mui/icons-material";
@@ -10,7 +10,6 @@ import {
   arrayUnion,
   collection,
   doc,
-  setDoc,
   updateDoc,
 } from "firebase/firestore";
 import { useAuthContext } from "../../data/auth.js";
@@ -67,9 +66,9 @@ const PostJobForm = () => {
     try {
       addDoc(prodColRef, data).then(
         (value) => {
-          console.log(value.data());
+          console.log(value.id);
           updateDoc(userColRef, {
-            array: arrayUnion(value.id),
+            product: arrayUnion(value.id),
           });
         },
         setSuccess(true),

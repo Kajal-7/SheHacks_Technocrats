@@ -64,7 +64,7 @@ const PostJob = () => {
           </Grid>
           <Grid item xs={6}>
             {/* <p className='textField' style={{ fontSize: "21px"}}>Jobs posted by you</p> */}
-            { arr && <YourJobs arr={arr}/>  }
+            { arr ? <YourJobs arr={arr}/> : 'You did not post any jobs'  }
           </Grid>
         </Grid>
       </div>

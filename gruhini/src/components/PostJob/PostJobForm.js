@@ -6,8 +6,8 @@ import ThirdStep from './ThirdStep';
 import { ArrowBack } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { db } from '../../data/firebase';
-import { addDoc, arrayUnion, collection, doc, setDoc, updateDoc } from 'firebase/firestore';
-import {useAuthContext} from '../../data/auth.js'
+import { addDoc, arrayUnion, collection, doc, updateDoc } from 'firebase/firestore';
+import {useAuthContext} from '../../data/auth.js';
 import '../../style/PostJob.css';
  
 const PostJobForm = () => {
