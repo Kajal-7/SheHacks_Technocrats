@@ -72,9 +72,10 @@ const handleSubmit = (e) => {
         Deadline : dead,
         Duration : dura,
         Salary : sal,
-        type: type
+        type: type,
+        userId: user.uid
     }
-    console.log(user.uid);
+    
     const jobColRef = collection(db, 'postedJobs')
     const userColRef = doc(db, 'users', user.uid)
     try{

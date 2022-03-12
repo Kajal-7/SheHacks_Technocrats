@@ -17,6 +17,9 @@ import WorkIcon from "@mui/icons-material/Work";
 import data from "./data";
 import Filter from "./Filter";
 import Popup from "./Popup";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../data/firebase";
+import { Avatar } from "@mui/material";
 
 export default function CardSnippet() {
   const [arr, setarray] = useState(data);
@@ -24,7 +27,6 @@ export default function CardSnippet() {
   const [catgfilter, setcatgfilter] = useState("");
   const [isParttimeselected, setPartTime] = useState(true);
   const [isFulltimeselected, setFullTime] = useState(true);
-  
 
   const handleFilters = () => {
     let data1 = [];
@@ -59,9 +61,8 @@ export default function CardSnippet() {
           data1.push(data[i]);
       }
     }
-   
+
     setarray(data1);
-    
   };
   const [searchText, setSearchText] = useState("");
   const handleSearch = (event) => {
@@ -91,98 +92,114 @@ export default function CardSnippet() {
       <Grid container spacing={5}>
         {arr.map((item) => {
           return (
-            <Grid item xs={12} sm={12} md={6} lg={4}>
-              <Box sx={{ minWidth: 275 }}>
-                <Card variant="outlined">
-                  <CardContent>
-                    <Typography
-                      className="name"
-                      gutterBottom
-                      variant="h5"
-                      component="div"
-                    >
-                      <div className="row">
-                        <div className="col-9">
-                          {item.jobName} -{" "}
-                          <span className="jobtype">{item.type}</span>
+            <div>
+              <Grid item xs={12} sm={12} md={6} lg={4}>
+                {getDoc(doc(db, "users", item.userId))
+                  .then((snap) => {
+                    
+                    console.log(snap.data())
+                  })
+                  .catch((e) => {
+                    console.log(e);
+                  })}
+                <Box sx={{ minWidth: 275 }}>
+                  <Card variant="outlined">
+                    <CardContent>
+                      <Typography
+                        className="name"
+                        gutterBottom
+                        variant="h5"
+                        component="div"
+                      >
+                        <div className="row">
+                          <div className="col-9">
+                            {item.jobName} -{" "}
+                            <span className="jobtype">{item.type}</span>
+                          </div>
+                          <div className="col-3">
+                            <Popup
+                              jobTitle={item.jobName}
+                              type={item.type}
+                              name={item.title}
+                              desc={item.Description}
+                              duration={item.Duration}
+                              stipend={item.Salary}
+                              deadline={item.Deadline}
+                              phone={item.PhoneNo}
+                              email={item.Email}
+                              fullName={item.FullName}
+                              location={item.location}
+                            />
+                          </div>
                         </div>
-                        <div className="col-3">
-                          <Popup
-                            jobTitle={item.jobName}
-                            type={item.type}
-                            name={item.title}
-                            desc={item.Description}
-                            duration={item.Duration}
-                            stipend={item.Salary}
-                            deadline={item.Deadline}
-                            phone={item.PhoneNo}
-                            email={item.Email}
-                            fullName={item.FullName}
-                            location={item.location}
-                          />
+                      </Typography>
+                      <Typography>
+                        <div className="d-flex title">
+                          {item.title}
+                          &nbsp;&nbsp;&nbsp;
+                          <Star />
                         </div>
-                      </div>
-                    </Typography>
-                    <Typography>
-                      <div className="d-flex title">
-                        {item.title}
-                        &nbsp;&nbsp;&nbsp;
-                        <Star />
-                      </div>
-                    </Typography>
+                      </Typography>
 
-                    <div>
-                      <div
-                        className="info-small"
-                        style={{ display: "inline-block" }}
-                      >
-                        <div className="tag" style={{ display: "inline-flex" }}>
-                          <LocationOnOutlinedIcon /> {item.location}
+                      <div>
+                        <div
+                          className="info-small"
+                          style={{ display: "inline-block" }}
+                        >
+                          <div
+                            className="tag"
+                            style={{ display: "inline-flex" }}
+                          >
+                            <LocationOnOutlinedIcon /> {item.location}
+                          </div>
+                        </div>
+                        <div
+                          className="info-small"
+                          style={{ display: "inline-block" }}
+                        >
+                          <div
+                            className="tag"
+                            style={{ display: "inline-flex" }}
+                          >
+                            <PhoneInTalkOutlinedIcon />
+                            {item.PhoneNo}
+                          </div>
                         </div>
                       </div>
                       <div
-                        className="info-small"
+                        className="text-center info mt-5"
                         style={{ display: "inline-block" }}
                       >
                         <div className="tag" style={{ display: "inline-flex" }}>
-                          <PhoneInTalkOutlinedIcon />
-                          {item.PhoneNo}
+                          <EventAvailableOutlinedIcon /> Duration
                         </div>
+                        <div className="value">{item.Duration}</div>
                       </div>
-                    </div>
-                    <div
-                      className="text-center info mt-5"
-                      style={{ display: "inline-block" }}
-                    >
-                      <div className="tag" style={{ display: "inline-flex" }}>
-                        <EventAvailableOutlinedIcon /> Duration
+                      <div
+                        className="info text-center"
+                        style={{ display: "inline-block" }}
+                      >
+                        <div className="tag" style={{ display: "inline-flex" }}>
+                          <PaidOutlinedIcon />
+                          Stipend
+                        </div>
+                        <div className="value">{item.Salary}</div>
                       </div>
-                      <div className="value">{item.Duration}</div>
-                    </div>
-                    <div
-                      className="info text-center"
-                      style={{ display: "inline-block" }}
-                    >
-                      <div className="tag" style={{ display: "inline-flex" }}>
-                        <PaidOutlinedIcon />
-                        Stipend
+                      <div
+                        className="info text-center"
+                        style={{ display: "inline-block" }}
+                      >
+                        <div className="tag" style={{ display: "inline-flex" }}>
+                          <AccessTimeRoundedIcon />
+                          Apply by
+                        </div>
+                        <div className="value">{item.Deadline}</div>
                       </div>
-                      <div className="value">{item.Salary}</div>
-                    </div>
-                    <div
-                      className="info text-center"
-                      style={{ display: "inline-block" }}
-                    >
-                      <div className="tag" style={{ display: "inline-flex" }}>
-                        <AccessTimeRoundedIcon />
-                        Apply by
-                      </div>
-                      <div className="value">{item.Deadline}</div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Box>
-            </Grid>
+                    </CardContent>
+                  </Card>
+                </Box>
+              </Grid>
+            </div>
           );
         })}
       </Grid>
