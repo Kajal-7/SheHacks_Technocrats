@@ -17,16 +17,14 @@ import WorkIcon from "@mui/icons-material/Work";
 import data from "./data";
 import Filter from "./Filter";
 import Popup from "./Popup";
-import { doc, getDoc } from "firebase/firestore";
-import { db } from "../../data/firebase";
-import { Avatar } from "@mui/material";
+
 
 export default function CardSnippet() {
   const [arr, setarray] = useState(data);
   const [locFilter, setlocFilter] = useState("");
   const [catgfilter, setcatgfilter] = useState("");
-  const [isParttimeselected, setPartTime] = useState(true);
-  const [isFulltimeselected, setFullTime] = useState(true);
+  const [isParttimeselected, setPartTime] = useState(false);
+  const [isFulltimeselected, setFullTime] = useState(false);
 
   const handleFilters = () => {
     let data1 = [];
@@ -61,8 +59,27 @@ export default function CardSnippet() {
           data1.push(data[i]);
       }
     }
+    let data2=[];
+    let len2=data1.length;
 
-    setarray(data1);
+    if(!isFulltimeselected && isParttimeselected){
+      for(let i=0;i<len2;i++){
+        if(data1[i].type=="Part Time")
+        data2.push(data1[i]);
+      }
+    }
+    else if(!isParttimeselected && isFulltimeselected ){
+      for(let i=0;i<len2;i++){
+        if(data1[i].type=="Full Time")
+        data2.push(data1[i]);
+      }
+    }
+    else{
+      data2=data1;
+    }
+    
+    setarray(data2);
+    
   };
   const [searchText, setSearchText] = useState("");
   const handleSearch = (event) => {
@@ -84,24 +101,19 @@ export default function CardSnippet() {
         locFilter={locFilter}
         catgfilter={catgfilter}
         searchText={searchText}
+        partTime={isParttimeselected}
+        fullTime={isFulltimeselected}
         onLocSet={setlocFilter}
         onCatgSet={setcatgfilter}
         onSave={handleFilters}
         onSearch={handleSearch}
+        onPartTimeCheck={setPartTime}
+        onFullTimeCheck={setFullTime}
       />
       <Grid container spacing={5}>
         {arr.map((item) => {
           return (
-            <div>
-              <Grid item xs={12} sm={12} md={6} lg={4}>
-                {getDoc(doc(db, "users", item.userId))
-                  .then((snap) => {
-                    
-                    console.log(snap.data())
-                  })
-                  .catch((e) => {
-                    console.log(e);
-                  })}
+            <Grid item xs={12} sm={12} md={6} lg={4}>
                 <Box sx={{ minWidth: 275 }}>
                   <Card variant="outlined">
                     <CardContent>
@@ -195,11 +207,12 @@ export default function CardSnippet() {
                         </div>
                         <div className="value">{item.Deadline}</div>
                       </div>
+                     
                     </CardContent>
                   </Card>
                 </Box>
               </Grid>
-            </div>
+            
           );
         })}
       </Grid>
