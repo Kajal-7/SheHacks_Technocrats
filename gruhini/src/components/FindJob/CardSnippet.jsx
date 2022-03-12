@@ -24,8 +24,7 @@ export default function CardSnippet() {
   const [catgfilter, setcatgfilter] = useState("");
   const [isParttimeselected, setPartTime] = useState(true);
   const [isFulltimeselected, setFullTime] = useState(true);
-  console.log(locFilter);
-  console.log(catgfilter);
+  
 
   const handleFilters = () => {
     let data1 = [];
@@ -60,10 +59,9 @@ export default function CardSnippet() {
           data1.push(data[i]);
       }
     }
-    //console.log(data1);
+   
     setarray(data1);
-    // console.log(arr);
-    console.log("hello filters applied");
+    
   };
   const [searchText, setSearchText] = useState("");
   const handleSearch = (event) => {
