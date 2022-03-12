@@ -45,11 +45,16 @@
 
 @import "./App.css";
 
-.service-card {
-  background-color: var(--for-color);
+.job-card {
+  min-width: 431px !important;
+}
+
+.service-card,
+.job-card {
+  background-color: var(--for-color) !important;
   color: var(--txt-color);
   box-shadow: none;
-  border: 0.5px solid var(--sec-color);
+  border: 0.5px solid var(--sec-color) !important;
 }
 
 @media (max-width: 700px) {

@@ -91,7 +91,7 @@ const PostJobForm = () => {
 
   return (
     <form
-      style={{ color: "--txt-color", backgroundColor: "white" }}
+      style={{ color: "txt-color", backgroundColor: "white" }}
       onSubmit={handleSubmit}
       className="jobForm"
     >

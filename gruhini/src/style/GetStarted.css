@@ -31,8 +31,17 @@ Button:hover {
 }
 
 .logo {
-  width: 150px;
-  margin: 10px;
+  height: 40px;
+  margin: 10px 0px 10px 10px;
+}
+
+.gs-nav svg {
+  height: 40px;
+  margin-left: -15px;
+}
+
+.gs-nav svg path {
+  fill: var(--txt-color) !important;
 }
 
 .nav-btn-sm {

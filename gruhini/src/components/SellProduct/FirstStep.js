@@ -99,7 +99,7 @@ export default function FirstStep({
           <label htmlFor="input">Service Description</label>
         </div>
         <div>
-          <input
+          <textarea
             required
             type="text"
             onChange={(e) => onDescChange(e.target.value)}

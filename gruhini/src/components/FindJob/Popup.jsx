@@ -56,7 +56,7 @@ export default function ResponsiveDialog({
         onClose={handleClose}
         aria-labelledby="responsive-dialog-title"
       >
-        <DialogTitle className="popup" id="responsive-dialog-title">
+        <DialogTitle className="popup txt" id="responsive-dialog-title">
           {jobTitle} - <span className="jobtype">{type}</span>
           <div className="d-flex title">
             {name}
@@ -64,7 +64,7 @@ export default function ResponsiveDialog({
             <Star />
           </div>
         </DialogTitle>
-        <DialogContent className="popup">
+        <DialogContent className="popup txt">
           <div className="row">
             <div className="col-7">{desc}</div>
             <div className="col contact-info">
@@ -91,7 +91,7 @@ export default function ResponsiveDialog({
             </div>
           </div>
         </DialogContent>
-        <DialogActions className="popup">
+        <DialogActions className="popup txt">
           <div className="wrap-info-popup mt-4">
             <div
               className="text-center info-popup ps-4 pe-5 pb-3"

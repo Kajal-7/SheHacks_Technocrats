@@ -50,7 +50,9 @@ function ResponsiveDrawer() {
               </div>
               <div className="col-3 small-display-none text-center txt">
                 <div className="ps-5 mt-4">
-                  <h2>Hire a housewife, encourage them</h2>
+                  <h2 className="tri-color">
+                    Hire a housewife, encourage them
+                  </h2>
                   <br />
                   We at gruhini want to provide an opportunity for all those
                   ambitius housewives whho wants to express their skills and

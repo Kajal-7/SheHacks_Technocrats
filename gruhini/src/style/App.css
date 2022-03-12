@@ -40,15 +40,6 @@ form {
   --txt-color: #d6d6d6;
 }
 
-.profile {
-  position: fixed !important;
-  right: 10px !important;
-  background-color: var(--for-color);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-  padding: 10px;
-}
-
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -99,4 +90,12 @@ form {
   background-color: var(--pri-color) !important;
   border: 1px solid var(--pri-color) !important;
   color: #ffffff !important;
+}
+
+.tri-color {
+  color: var(--sec-color);
+}
+
+input {
+  color: var(--txt-color) !important;
 }
