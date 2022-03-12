@@ -12,6 +12,17 @@ body {
   background-color: var(--for-color);
 }
 
+form{
+     
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: fit-content;
+  height: auto;
+  /* margin: 20px 0px 10px 20px; */
+  padding: 18px;
+}
+
 :root {
   --pri-color: #97c1c8;
   --sec-color: #56669d;
