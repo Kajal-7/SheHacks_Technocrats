@@ -129,3 +129,15 @@ hr {
 .dropdown {
   float: center;
 }
+
+.ctc1-small {
+  background-color: var(--sec-color) !important;
+}
+
+.ctc1-small:hover {
+  background-color: var(--pri-color) !important;
+}
+
+.ctc1-small {
+  color: #ffffff !important;
+}

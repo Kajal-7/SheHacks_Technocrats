@@ -6,7 +6,6 @@ import Grid from "@mui/material/Grid";
 import "./style/App.css";
 import "./style/Empower.css";
 
-
 export default function Empower() {
   return (
     <Grid sx={{ paddingRight: 40, paddingLeft: 10 }}>

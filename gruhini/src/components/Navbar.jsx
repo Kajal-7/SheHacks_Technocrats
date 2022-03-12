@@ -217,7 +217,9 @@ function Navbar() {
                   <div className="profile">
                     <p style={{ fontSize: "12px" }}>{data.email}</p>
                     <p>{data.name}</p>
-                    <Button onClick={handleLogout}>Logut</Button>
+                    <Button className="ctc1-small" onClick={handleLogout}>
+                      Logut
+                    </Button>
                   </div>
                 )}
               </div>
