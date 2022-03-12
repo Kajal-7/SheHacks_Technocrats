@@ -8,7 +8,7 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import EventAvailableOutlinedIcon from "@mui/icons-material/EventAvailableOutlined";
 import PaidOutlinedIcon from "@mui/icons-material/PaidOutlined";
-import AccessTimeFilledOutlinedIcon from "@mui/icons-material/AccessTimeFilledOutlined";
+import AccessTimeRoundedIcon from "@mui/icons-material/AccessTimeRounded";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Star from "./Star";
@@ -97,60 +97,90 @@ export default function CardSnippet() {
               <Box sx={{ minWidth: 275 }}>
                 <Card variant="outlined">
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      {item.jobName}
+                    <Typography
+                      className="name"
+                      gutterBottom
+                      variant="h5"
+                      component="div"
+                    >
+                      <div className="row">
+                        <div className="col-9">
+                          {item.jobName} -{" "}
+                          <span className="jobtype">{item.type}</span>
+                        </div>
+                        <div className="col-3">
+                          <Popup
+                            jobTitle={item.jobName}
+                            type={item.type}
+                            name={item.title}
+                            desc={item.Description}
+                            duration={item.Duration}
+                            stipend={item.Salary}
+                            deadline={item.Deadline}
+                            phone={item.PhoneNo}
+                            email={item.Email}
+                            fullName={item.FullName}
+                            location={item.location}
+                          />
+                        </div>
+                      </div>
                     </Typography>
-                    <Typography variant="h6">{item.title}</Typography>
-                    <Star />
+                    <Typography>
+                      <div className="d-flex title">
+                        {item.title}
+                        &nbsp;&nbsp;&nbsp;
+                        <Star />
+                      </div>
+                    </Typography>
+
                     <div>
-                      <div className="info" style={{ display: "inline-block" }}>
+                      <div
+                        className="info-small"
+                        style={{ display: "inline-block" }}
+                      >
                         <div className="tag" style={{ display: "inline-flex" }}>
                           <LocationOnOutlinedIcon /> {item.location}
                         </div>
                       </div>
-                      <div className="info" style={{ display: "inline-block" }}>
+                      <div
+                        className="info-small"
+                        style={{ display: "inline-block" }}
+                      >
                         <div className="tag" style={{ display: "inline-flex" }}>
                           <PhoneInTalkOutlinedIcon />
                           {item.PhoneNo}
                         </div>
                       </div>
                     </div>
-                    <div className="info" style={{ display: "inline-block" }}>
+                    <div
+                      className="text-center info mt-5"
+                      style={{ display: "inline-block" }}
+                    >
                       <div className="tag" style={{ display: "inline-flex" }}>
                         <EventAvailableOutlinedIcon /> Duration
                       </div>
                       <div className="value">{item.Duration}</div>
                     </div>
-                    <div className="info" style={{ display: "inline-block" }}>
+                    <div
+                      className="info text-center"
+                      style={{ display: "inline-block" }}
+                    >
                       <div className="tag" style={{ display: "inline-flex" }}>
                         <PaidOutlinedIcon />
                         Stipend
                       </div>
                       <div className="value">{item.Salary}</div>
                     </div>
-                    <div className="info" style={{ display: "inline-block" }}>
+                    <div
+                      className="info text-center"
+                      style={{ display: "inline-block" }}
+                    >
                       <div className="tag" style={{ display: "inline-flex" }}>
-                        <AccessTimeFilledOutlinedIcon />
+                        <AccessTimeRoundedIcon />
                         Apply by
                       </div>
                       <div className="value">{item.Deadline}</div>
                     </div>
-                    <div className="info" style={{ display: "inline-block" }}>
-                      <div className="tag" style={{ display: "inline-flex" }}>
-                        <WorkIcon />
-                        Job Type
-                      </div>
-                      <div className="value">{item.type}</div>
-                    </div>
-                    <Popup
-                      name={item.title}
-                      desc={item.jobName}
-                      image={item.Duration}
-                      email={item.jobName}
-                      phone={item.PhoneNo}
-                      loc={item.location}
-                      cost={item.Salary}
-                    />
                   </CardContent>
                 </Card>
               </Box>
