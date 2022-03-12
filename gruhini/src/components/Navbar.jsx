@@ -24,6 +24,11 @@ const Navbar = () => {
             Navbar
             {error && <div>{error.message}</div>}
             <Link to={'/empower'}>Empower</Link>
+            <Link to={'/findjob'}>Find Job</Link>
+            <Link to={'/postjob'}>PostJob</Link>
+            <Link to={'/buyproduct'}>Buy</Link>
+            <Link to={'/sellproduct'}>Sell</Link> 
+            <Link to={'/queries'}>Queries</Link>
             <Button onClick={handleLogout}>Logout</Button>
         </div>
      );
