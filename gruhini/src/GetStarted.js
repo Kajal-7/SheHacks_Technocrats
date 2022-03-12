@@ -12,7 +12,7 @@ import flower from "./assets/bg-flower.png";
 import animation from "./assets/multi-tasking.png";
 import help from "./assets/icons/help.svg";
 import contact from "./assets/icons/contact.svg";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -116,7 +116,7 @@ function GetStarted() {
                 <br></br>
                 We have something for every Gruhini.
               </Typography>
-              {/* <Link to={"/login"} style={{ textDecoration: "none" }}> */}
+              <Link to={"/login"} style={{ textDecoration: "none" }}>
               <Button
                 className="CTC1"
                 variant="contained"
@@ -124,12 +124,12 @@ function GetStarted() {
               >
                 Log In
               </Button>
-              {/* </Link> */}
-              {/* <Link to={"/register"} style={{ textDecoration: "none" }}> */}
+              </Link>
+              <Link to={"/register"} style={{ textDecoration: "none" }}>
               <Button className="CTC2" variant="outlined" sx={{ boxShadow: 0 }}>
                 Register
               </Button>
-              {/* </Link> */}
+              </Link>
             </Item>
           </Grid>
           <Grid item lg={6}>
