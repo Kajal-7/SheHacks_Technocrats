@@ -64,7 +64,7 @@ const Login = () => {
       //mui end
 
     return ( 
-        <form style={{ color: "var(--sec-color)" , backgroundColor:'white', textAlign:'center', width: '50vw' ,marginLeft : '25vw'}} >
+        <form style={{ color: "var(--sec-color)" , backgroundColor:'white', textAlign:'center', width: '50vw' ,marginLeft : '25vw', marginTop:'40px'}} >
       
       <div style={{display:'inline'}}>
         <Typography variant='h4' sx={{fontSize:"30px",mb:3}} >

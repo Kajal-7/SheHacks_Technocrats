@@ -20,12 +20,12 @@ function FindJob() {
               width: { sm: `calc(100% - ${drawerWidth}px)` },
             }}
           >
-            <h2 className="mt-3 mb-0 tri-color">
-              <em>
+            <p style={{fontSize:'20px'}} className="mt-3 mb-0 tri-color">
+           
                 Opportunities are waiting! Just grab them, find the job that suits
                 you the best!
-              </em>
-            </h2>
+             
+            </p>
             <Cards />
           </Box>
         </Box>

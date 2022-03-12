@@ -59,14 +59,16 @@ ul li a:after {
   height: 1.5px;
   left: 50%;
   position: absolute;
-  top: 57px;
+  top: 59px;
   background: var(--txt-color);
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
+  color: var(--sec-color) !important;
 }
 ul li a:hover:after {
   width: 100%;
   left: 0;
+  color: var(--sec-color);
 }
 
 ul li svg {

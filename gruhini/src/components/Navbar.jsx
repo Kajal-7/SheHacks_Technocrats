@@ -132,7 +132,7 @@ function Navbar() {
               </li>
               <li class="nav-item text-center dropdown">
                 <div className="dropbtn">
-                  <Link to={"/findjob"}>
+                  <Link to={"#"}>
                     <svg
                       // width="32"
                       // height="29"
