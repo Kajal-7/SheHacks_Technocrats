@@ -57,10 +57,7 @@ export default function ResponsiveDialog({ ques, video, instructions, color }) {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
-          <DialogContentText
-            className="txt display-linebreak"
-            id="Inst"
-          >
+          <DialogContentText className="txt display-linebreak" id="Inst">
             <ol className="instructions-list">
               {instructions.map((item) => {
                 return (
@@ -79,11 +76,7 @@ export default function ResponsiveDialog({ ques, video, instructions, color }) {
           </DialogContentText>
         </DialogContent>
         <DialogActions className="popup">
-          <Button
-            className="CTC1 ctc1-small m-1"
-            size="small"
-            onClick={handleClose}
-          >
+          <Button className="ctc1-small m-1" size="small" onClick={handleClose}>
             Close
           </Button>
         </DialogActions>

@@ -40,11 +40,7 @@ export default function CardSnippet() {
                   </Typography>
                 </CardContent>
                 <CardActions className="card-actions">
-                  <Button
-                    className="CTC2 ctc2-small m-1"
-                    href={email}
-                    size="small"
-                  >
+                  <Button className="ctc2-small m-1" href={email} size="small">
                     Contact
                   </Button>
                   <Popup

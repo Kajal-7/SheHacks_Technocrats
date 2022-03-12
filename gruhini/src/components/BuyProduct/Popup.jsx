@@ -36,11 +36,7 @@ export default function ResponsiveDialog({
 
   return (
     <div>
-      <Button
-        className="CTC1 ctc1-small m-1"
-        size="small"
-        onClick={handleClickOpen}
-      >
+      <Button className="ctc1-small m-1" size="small" onClick={handleClickOpen}>
         Learn More
       </Button>
       <Dialog
@@ -93,10 +89,10 @@ export default function ResponsiveDialog({
           </div>
         </DialogContent>
         <DialogActions className="popup">
-          <Button className="CTC2 ctc2-small m-1" href={email} size="small">
+          <Button className="ctc2-small m-1" href={email} size="small">
             Contact
           </Button>
-          <Button className="CTC1 ctc1-small m-1" size="small">
+          <Button className="ctc1-small m-1" size="small">
             Hire Me
           </Button>
         </DialogActions>
