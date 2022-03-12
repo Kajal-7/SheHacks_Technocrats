@@ -51,6 +51,14 @@ ul li a {
   position: relative;
 }
 
+ul li a:hover {
+  color: var(--pri-color) !important;
+}
+
+.nav-item:hover {
+  color: var(--pri-color) !important;
+}
+
 ul li a:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
@@ -60,15 +68,15 @@ ul li a:after {
   left: 50%;
   position: absolute;
   top: 59px;
-  background: var(--txt-color);
+  background: var(--pri-color);
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
-  color: var(--sec-color) !important;
+  color: var(--pri-color) !important;
 }
 ul li a:hover:after {
   width: 100%;
   left: 0;
-  color: var(--sec-color);
+  color: var(--pri-color) !important;
 }
 
 ul li svg {
@@ -81,8 +89,15 @@ ul li svg path {
   stroke: var(--txt-color) !important;
 }
 
+ul li:hover svg path {
+  stroke: var(--pri-color) !important;
+}
 .fill path {
   fill: var(--txt-color);
+}
+
+ul li:hover .fill path {
+  fill: var(--pri-color);
 }
 
 hr {
@@ -113,7 +128,6 @@ hr {
 }
 
 .dropdown-content a:hover {
-  background-color: var(--pri-color);
   color: var(--txt-color);
   content: "";
 }
@@ -168,6 +182,23 @@ hr {
   padding: 10px;
 }
 
+.d-small {
+  display: none;
+}
+
 .profile p {
   font-size: 14px;
+}
+
+@media (max-width: 991px) {
+  ul li a:hover:after {
+    width: 0% !important;
+    left: 0;
+  }
+  .d-small {
+    display: flex;
+  }
+  .d-large {
+    display: none;
+  }
 }

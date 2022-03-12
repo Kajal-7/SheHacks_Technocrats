@@ -108,7 +108,7 @@ function Navbar() {
             </span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto" id="navbar-nav">
+            <ul class="navbar-nav ms-auto d-large" id="navbar-nav">
               <li class="nav-item text-center">
                 <Link activeClassName="navbar__link--active" to={"/empower"}>
                   <svg
@@ -233,10 +233,32 @@ function Navbar() {
                 </Link>
               </li>
             </ul>
+            <ul class="navbar-nav ms-auto d-small" id="navbar-nav">
+              <li class="nav-item mt-2 mb-2 text-center">
+                <Link activeClassName="navbar__link--active" to={"/empower"}>
+                  Empower
+                </Link>
+              </li>
+              <li class="nav-item mt-2 mb-2 text-center dropdown">
+                <Link to={"/findjob"}>Find Job</Link>
+              </li>
+              <li class="nav-item mt-2 mb-2 text-center dropdown">
+                <Link to={"/postjob"}>Post Job</Link>
+              </li>
+              <li class="nav-item mt-2 mb-2 text-center dropdown">
+                <Link to={"/buyproduct"}>Hire Service</Link>{" "}
+              </li>
+              <li class="nav-item mt-2 mb-2 text-center dropdown">
+                <Link to={"/sellproduct"}>Post Service</Link>
+              </li>
+              <li class="nav-item mt-2 mb-2 text-center dropdown">
+                <Link to={"/queries"}>Queries</Link>
+              </li>
+            </ul>
           </div>
           <div class="nav-item ms-3">
             {data && (
-              <div>
+              <div class="avatar">
                 <div>
                   <Avatar sx={{ bgcolor: data.avatar }}>
                     <Button variant="normal" onClick={displayProfile}>
