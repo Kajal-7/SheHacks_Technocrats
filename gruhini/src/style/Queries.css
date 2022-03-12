@@ -1,0 +1,4 @@
+@import "./App.css";
+.accordion-header{
+    background-color: var(--pri-color) !important;
+}
