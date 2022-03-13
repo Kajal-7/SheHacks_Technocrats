@@ -17,7 +17,7 @@
 <p>Dark and Light themes for better visibility.</p>
 <h2>Technology</h2>
 <h4>ReactJS, HTML, CSS, JavaScript, Google Firebase</h4>
-<p>Authentication and database Services using <a href="https://firebase.google.com/">Firebase</a></p>
+<p>Authentication and database and hosting services using <a href="https://firebase.google.com/">Firebase</a></p>
 <p>Routes using <a href="https://www.npmjs.com/package/react-router-dom">react-router-dom</a></p>
 <p>Styles supported by <a href="https://mui.com/">Material UI</a></p>
 <p>Spinners using <a  href="https://www.npmjs.com/package/react-spinners">react-spinners</a></p>
