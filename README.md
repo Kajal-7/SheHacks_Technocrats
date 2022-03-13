@@ -22,6 +22,8 @@
 <p>Styles supported by <a href="https://mui.com/">Material UI</a></p>
 <p>Spinners using <a  href="https://www.npmjs.com/package/react-spinners">react-spinners</a></p>
 <p>Translate functionality using <a  href="https://www.npmjs.com/package/google-translate">Google-Translate</p>
+<h2>Database Structure</h2>
+<img src="https://user-images.githubusercontent.com/75926051/158048658-1060320b-95c5-4d84-b003-c5027edfae01.png" />
 <h2>Demonstration</h2>
 <p><a href="https://gruhini-efac0.web.app/">Website Link</a>
 <p><a href="">Video Link</a>
