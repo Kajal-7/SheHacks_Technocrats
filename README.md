@@ -1,6 +1,6 @@
 # Gruhini
 <h2>About</h2>
-<p><a href="https://gruhini-efac0.web.app/">Gruhini</a> is an initiative for all women who aspire to grow, connect and start a new self-dependent journey. If you are looking for a job opportunity or wish launch your own new product, Gruhini is the place for you. We have something for every Gruhini. We aim to set you free so that you don’t have to depend on someone.
+<p><a href="https://gruhini-efac0.web.app/">Gruhini</a> is a platform for all women who aspire to grow, connect and start a new self-dependent journey. If you are looking for a job opportunity or wish launch your own new product, Gruhini is the place for you. We have something for every Gruhini. We aim to set you free so that you don’t have to depend on someone.
 </p>
 <h2>Usage</h2>
 <h4>Find a Job</h4>
@@ -22,3 +22,7 @@
 <p>Styles supported by <a href="https://mui.com/">Material UI</a></p>
 <p>Spinners using <a  href="https://www.npmjs.com/package/react-spinners">react-spinners</a></p>
 <p>Translate functionality using <a  href="https://www.npmjs.com/package/google-translate">Google-Translate</p>
+<h2>Demonstration</h2>
+<p><a href="https://gruhini-efac0.web.app/">Website Link</a>
+<p><a href="">Video Link</a>
+<p><a href="https://docs.google.com/presentation/d/1Vh-g0Yb6nT34Wn0AvxWsuBJpGPR3hVTqNr8CSFF7uuQ/edit?usp=sharing">Presentation Link</a>
