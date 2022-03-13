@@ -16,7 +16,7 @@
 <p>We provide the option to translate our website to different languages for supporting non-english speakers.</p>
 <p>Dark and Light themes for better visibility.</p>
 <h2>Technology</h2>
-<h4>ReactJS, Google Firebase</h4>
+<h4>ReactJS, HTML, CSS, JavaScript, Google Firebase</h4>
 <p>Authentication and database Services using <a href="https://firebase.google.com/">Firebase</a></p>
 <p>Routes using <a href="https://www.npmjs.com/package/react-router-dom">react-router-dom</a></p>
 <p>Styles supported by <a href="https://mui.com/">Material UI</a></p>
