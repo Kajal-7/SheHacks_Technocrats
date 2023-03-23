@@ -60,10 +60,10 @@ function Navbar() {
     <div className="navbar">
       {/* {user && <div>{user.uid}</div>} */}
 
-      <nav class="navbar navbar-expand-lg bg-var fixed-top ps-lg-5 pe-lg-5">
+      <nav className="navbar navbar-expand-lg bg-var fixed-top ps-lg-5 pe-lg-5">
         <div class="container-fluid">
           <a
-            class="navbar-brand text-start justify-content-start mt-2 m-1"
+            className="navbar-brand text-start justify-content-start mt-2 m-1"
             href="#"
           >
             <img className="logo-nav" src={logo} alt="" />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -7,19 +7,23 @@ import { Button } from "@mui/material";
 import CardMedia from "@mui/material/CardMedia";
 import Popup from "../BuyProduct/Popup";
 
-const YourProducts = ({ arr }) => {
+const YourProducts = (props) => {
+  const [myProducts, setMyProducts] = useState(props.myProducts);
   const [show, setShow] = useState(false);
+  useEffect(()=>{
+    setMyProducts(props.myProducts);
+  },[props.myProducts])
+
   return (
     <div className="yourPros">
       <Button
         className="show mt-5 ms-5 ctc1-small"
         onClick={() => setShow(!show)}
       >
-        Show Services posted by You
+        Show Jobs Posted by you
       </Button>
-      {show && (
-        <div className="row p-3 show">
-          {arr.map((item) => {
+        {show && <div className="row p-3 show">
+          {myProducts.map((item) => {
             const email = `mailto:${item.Email}`;
             return (
               <div className="col text-center d-block mx-auto mt-5 mb-5">
@@ -64,8 +68,7 @@ const YourProducts = ({ arr }) => {
               </div>
             );
           })}
-        </div>
-      )}
+        </div>}
     </div>
   );
 };

@@ -1,41 +1,33 @@
-import React from "react";
+import React, { useState, useEffect} from "react";
 import Navbar from "../components/Navbar";
 import PostJobForm from "../components/PostJob/PostJobForm";
-import { collection, doc, getDoc } from "firebase/firestore";
-import { db } from "../data/firebase";
-import { useAuthContext } from "../data/auth";
-import { useEffect, useState } from "react";
 import YourJobs from "../components/PostJob/YourJobs";
+import { db } from "../data/firebase";
+import { collection, doc, getDoc } from "firebase/firestore";
+import { useAuthContext } from "../data/auth";
 
 const PostJob = () => {
-  const colRef = collection(db, "postedJobs");
-  const [arr, setArr] = useState(null);
-  const { user } = useAuthContext();
-  // const [myJobs, setMyJobs] = useState([]);
-  // const [show, setShow] = useState(false);
+  const [myJobs, setMyJobs] = useState([]);
+  const colRef= collection(db, "postedJobs");
+  const {user}=useAuthContext();
 
-  // const handleClick = () => {
-  //   setShow(!show);
-  // };
-
-  useEffect(() => {
-    let temp = [];
+  useEffect(()=>{
+    const temp = [];
     const docRef = doc(db, "users", user.uid);
     getDoc(docRef)
-      .then((doc) => {
-        return doc.data().array;
-      })
-      .then((myJobs) => {
-        myJobs.forEach((jid) => {
-          getDoc(doc(colRef, jid)).then((snap) => {
-            temp.push(snap.data());
+        .then((doc) => {
+          return doc.data().array;
+        })
+        .then((jobs) => {
+          jobs.forEach((jid) => {
+            getDoc(doc(colRef, jid)).then((snap) => {
+              temp.push(snap.data());
+            });
           });
         });
-      });
-    setArr(temp);
-    console.log(arr);
-  }, []);
-
+      setMyJobs(temp);
+   },[user]);
+   
   return (
     <div className="postJob">
       <Navbar />
@@ -54,9 +46,8 @@ const PostJob = () => {
               <p style={{ fontSize: "18px" }}>
                 Need staff? Spread the word among aspiring women employees and artisans via Gruhini. 
               </p>
+              <YourJobs myJobs={myJobs}/>
             </div>
-            {/* <p className='textField' style={{ fontSize: "21px"}}>Jobs posted by you</p> */}
-            {arr ? <YourJobs arr={arr} /> : "You did not post any jobs"}
           </div>
         </div>
       </div>

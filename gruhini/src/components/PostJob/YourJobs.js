@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
@@ -9,8 +9,13 @@ import PaidOutlinedIcon from "@mui/icons-material/PaidOutlined";
 import AccessTimeFilledOutlinedIcon from "@mui/icons-material/AccessTimeFilledOutlined";
 import { Button } from "@mui/material";
 
-const YourJobs = ({ arr }) => {
+const YourJobs = (props) => {
+  const [myJobs, setMyJobs] = useState(props.myJobs);
   const [show, setShow] = useState(false);
+  useEffect(()=>{
+    setMyJobs(props.myJobs);
+  },[props.myJobs])
+  
   return (
     <div className="yourJob">
       <Button
@@ -19,9 +24,8 @@ const YourJobs = ({ arr }) => {
       >
         Show Jobs Posted by you
       </Button>
-      {show && (
-        <div className="row p-3 show">
-          {arr.map((item) => {
+        {show && <div className="row p-3 show">
+          {myJobs.map((item) => {
             return (
               <div className="col mt-5 mb-5">
                 <Card className="card">
@@ -71,8 +75,7 @@ const YourJobs = ({ arr }) => {
               </div>
             );
           })}
-        </div>
-      )}
+        </div>}
     </div>
   );
 };

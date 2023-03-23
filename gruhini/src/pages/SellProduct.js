@@ -9,21 +9,15 @@ import YourProducts from "../components/SellProduct/YourProducts";
 
 const PostJob = () => {
   const colRef = collection(db, "sellProducts");
-  const [arr, setArr] = useState(null);
+  const [myProducts, setMyProducts] = useState([]);
   const { user } = useAuthContext();
-  // const [myJobs, setMyJobs] = useState([]);
-  // const [show, setShow] = useState(false);
-
-  // const handleClick = () => {
-  //   setShow(!show);
-  // };
 
   useEffect(() => {
     let temp = [];
     const docRef = doc(db, "users", user.uid);
     getDoc(docRef)
       .then((doc) => {
-        return doc.data().product;
+        return doc.data().products;
       })
       .then((myPros) => {
         myPros.length && myPros.forEach((pid) => {
@@ -32,8 +26,7 @@ const PostJob = () => {
           });
         });
       });
-    setArr(temp);
-    console.log(arr);
+    setMyProducts(temp);
   }, []);
 
   return (
@@ -55,8 +48,7 @@ const PostJob = () => {
                 Stand out and show case your product. Let the world know your potential.
               </p>
             </div>
-            {/* <p className='textField' style={{ fontSize: "21px"}}>Jobs posted by you</p> */}
-            {arr ? <YourProducts arr={arr} /> : "You did not post any jobs"}
+            {myProducts ? <YourProducts myProducts={myProducts} /> : "You did not post any jobs"}
           </div>
         </div>
       </div>

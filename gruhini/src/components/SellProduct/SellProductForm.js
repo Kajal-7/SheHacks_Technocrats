@@ -68,7 +68,7 @@ const PostJobForm = () => {
         (value) => {
           console.log(value.id);
           updateDoc(userColRef, {
-            product: arrayUnion(value.id),
+            products: arrayUnion(value.id),
           });
         },
         setSuccess(true),
