@@ -1,17 +1,17 @@
 import React from "react";
-import "./style/GetStarted.css";
+import "../style/GetStarted.css";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import logo from "./assets/logo-gs.png";
+import logo from "../assets/logo-gs.png";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
-import flower from "./assets/bg-flower.png";
-import animation from "./assets/multi-tasking.png";
-import help from "./assets/icons/help.svg";
-import contact from "./assets/icons/contact.svg";
+import flower from "../assets/bg-flower.png";
+import animation from "../assets/multi-tasking.png";
+import help from "../assets/icons/help.svg";
+import contact from "../assets/icons/contact.svg";
 import { Link } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({

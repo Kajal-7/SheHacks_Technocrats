@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "./components/Navbar.jsx";
-import QuoteImg from "./components/Empower/QuoteImg";
-import Cardsnippet from "./components/Empower/Cardsnippet_Empower";
+import Navbar from "../components/Navbar.jsx";
+import QuoteImg from "../components/Empower/QuoteImg";
+import Cardsnippet from "../components/Empower/Cardsnippet_Empower";
 import Grid from "@mui/material/Grid";
-import "./style/App.css";
-import "./style/Empower.css";
+import "../style/App.css";
+import "../style/Empower.css";
 
 export default function Empower() {
   return (

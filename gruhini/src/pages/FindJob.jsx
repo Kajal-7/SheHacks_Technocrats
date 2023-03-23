@@ -1,8 +1,8 @@
 import * as React from "react";
-import Cards from "./components/FindJob/CardSnippet";
+import Cards from "../components/FindJob/CardSnippet";
 import Box from "@mui/material/Box";
-import Navbar from "./components/Navbar";
-import "./style/Filter.css";
+import Navbar from "../components/Navbar";
+import "../style/Filter.css";
 
 const drawerWidth = 240;
 

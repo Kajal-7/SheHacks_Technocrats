@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./style/App.css";
+import "../style/App.css";
 import Empower from "./Empower";
 import FindJob from "./FindJob";
 import BuyProduct from "./BuyProduct";
@@ -7,13 +7,13 @@ import SellProduct from "./SellProduct";
 import PostJob from "./PostJob";
 import GetStarted from "./GetStarted";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Register from "./components/Authentication/Register";
-import Login from "./components/Authentication/Login";
-import ForgotPass from "./components/Authentication/ForgotPassword";
-import { Authentication } from "./data/auth";
-import PrivateRoute from "./components/PrivateRoute";
+import Register from "../components/Authentication/Register";
+import Login from "../components/Authentication/Login";
+import ForgotPass from "../components/Authentication/ForgotPassword";
+import { Authentication } from "../data/auth";
+import PrivateRoute from "../components/PrivateRoute";
 import Queries from "./Queries";
-import Loading from './components/Loading';
+import Loading from '../components/Loading';
 
 function App() {
 

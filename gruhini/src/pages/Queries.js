@@ -1,6 +1,6 @@
 import React from "react";
-import Accordionn from "./components/Queries/Accordionn";
-import Navbar from "./components/Navbar";
+import Accordionn from "../components/Queries/Accordionn";
+import Navbar from "../components/Navbar";
 
 const Queries= () => {
     return ( 

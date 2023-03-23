@@ -1,12 +1,11 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import PostJobForm from "./components/PostJob/PostJobForm";
-import Grid from "@mui/material/Grid";
+import Navbar from "../components/Navbar";
+import PostJobForm from "../components/PostJob/PostJobForm";
 import { collection, doc, getDoc } from "firebase/firestore";
-import { db } from "./data/firebase";
-import { useAuthContext } from "./data/auth";
+import { db } from "../data/firebase";
+import { useAuthContext } from "../data/auth";
 import { useEffect, useState } from "react";
-import YourJobs from "./components/PostJob/YourJobs";
+import YourJobs from "../components/PostJob/YourJobs";
 
 const PostJob = () => {
   const colRef = collection(db, "postedJobs");

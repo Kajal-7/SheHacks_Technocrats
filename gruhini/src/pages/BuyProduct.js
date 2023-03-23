@@ -1,11 +1,11 @@
 import * as React from "react";
-import Cards from "./components/BuyProduct/CardSnippet";
+import Cards from "../components/BuyProduct/CardSnippet";
 import Box from "@mui/material/Box";
-import Navbar from "./components/Navbar";
-import "./style/Filter.css";
-import "./style/BuyProduct.css";
-import search from "./assets/search.png";
-import gruhini from "./assets/gruhini_of_the_month.png";
+import Navbar from "../components/Navbar";
+import "../style/Filter.css";
+import "../style/BuyProduct.css";
+import search from "../assets/search.png";
+import gruhini from "../assets/gruhini_of_the_month.png";
 
 const drawerWidth = 240;
 
